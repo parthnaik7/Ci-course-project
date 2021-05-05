@@ -28,7 +28,10 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml clean test
     - name: List files
-      run: ls -ltra
+      run: |
+       ls -ltra
+       ls -ltra target
+       ls -ltra target/surefire-reports
     - name: Publish Test Report
       uses: starburstdata/action-testng-report@v1.0.1
       with:
