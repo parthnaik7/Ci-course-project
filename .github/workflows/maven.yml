@@ -29,6 +29,7 @@ jobs:
       run: | 
        mvn -B package --file pom.xml clean test
        find . -name "*.xml"
+       find . -name "*.html"
     - name: Publish Test Report
       uses: starburstdata/action-testng-report@v1.0.1
       with:
