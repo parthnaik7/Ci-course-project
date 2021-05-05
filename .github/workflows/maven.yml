@@ -27,6 +27,8 @@ jobs:
         ./scripts/InstallChrome.sh
     - name: Build with Maven
       run: mvn -B package --file pom.xml clean test
+    - name: List files
+      run: ls -ltra
     - name: Publish Test Report
       uses: starburstdata/action-testng-report@v1.0.1
       with:
