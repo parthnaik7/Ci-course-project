@@ -43,8 +43,6 @@
 					<configuration>	        
 						<skipTests>false</skipTests>    
 					</configuration>
-					<parallel>methods</parallel>
-					<threadCount>1</threadCount>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
