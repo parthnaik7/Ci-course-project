@@ -28,8 +28,7 @@ jobs:
     - name: Build with Maven
       run: | 
        mvn -B package --file pom.xml clean test
-       ls -ltra
-       ls -ltra target
+       find . -name "*.xml"
     - name: Publish Test Report
       uses: starburstdata/action-testng-report@v1.0.1
       with:
