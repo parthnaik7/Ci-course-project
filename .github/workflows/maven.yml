@@ -27,7 +27,7 @@ jobs:
         ./scripts/InstallChrome.sh
     - name: Build with Maven
       run: | 
-       mvn -B package --file pom.xml clean test -reporter org.testng.reporters.XMLReporter:generateTestResultAttributes=true,generateGroupsAttribute=true
+       mvn -B package --file pom.xml clean test
        find . -name "*.xml"
        find . -name "*.html"
     - name: Publish Test Report
