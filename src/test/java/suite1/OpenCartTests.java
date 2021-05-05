@@ -86,7 +86,7 @@ public class OpenCartTests {
 				options.addArguments("--disable-gpu"); // applicable to windows os only
 				options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 				browser = "Chrome";
-				driver = new ChromeDriver(service, options);
+				driver = new ChromeDriver(options);
 				driver.manage().window().maximize();
 			}
 		}
@@ -101,7 +101,7 @@ public class OpenCartTests {
 			options.addArguments("--disable-gpu"); // applicable to windows os only
 			options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
 			browser = "Chrome";
-			driver = new ChromeDriver(service, options);
+			driver = new ChromeDriver(options);
 			driver.manage().window().maximize();
 		}
 	}	
