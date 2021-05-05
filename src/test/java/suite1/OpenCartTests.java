@@ -13,6 +13,7 @@ import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -75,14 +76,34 @@ public class OpenCartTests {
 			}
 			else {
 				System.out.println("Invalid option Selected hence defaulting to Chrome");
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--no-sandbox"); // Bypass OS security model, MUST BE THE VERY FIRST OPTION
+				options.addArguments("--headless");
+				options.setExperimentalOption("useAutomationExtension", false);
+				options.addArguments("start-maximized"); // open Browser in maximized mode
+				options.addArguments("disable-infobars"); // disabling infobars
+				options.addArguments("--disable-extensions"); // disabling extensions
+				options.addArguments("--disable-gpu"); // applicable to windows os only
+				options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+				options.merge(capabilities);
 				browser = "Chrome";
-				driver = new ChromeDriver();
+				driver = new ChromeDriver(service, options);
 				driver.manage().window().maximize();
 			}
 		}
 		else {
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--no-sandbox"); // Bypass OS security model, MUST BE THE VERY FIRST OPTION
+			options.addArguments("--headless");
+			options.setExperimentalOption("useAutomationExtension", false);
+			options.addArguments("start-maximized"); // open Browser in maximized mode
+			options.addArguments("disable-infobars"); // disabling infobars
+			options.addArguments("--disable-extensions"); // disabling extensions
+			options.addArguments("--disable-gpu"); // applicable to windows os only
+			options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+			options.merge(capabilities);
 			browser = "Chrome";
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(service, options);
 			driver.manage().window().maximize();
 		}
 	}	
