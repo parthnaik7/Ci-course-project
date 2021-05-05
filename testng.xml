@@ -7,10 +7,4 @@
 	   <class name="suite1.OpenCartTests"/>
 	 </classes>
    </test>
-   
-  <test name="SaceDemoTest">
-     <classes>
-       <class name="suite2.SauceDemoTests"/>
-     </classes>
-   </test>
 </suite>
