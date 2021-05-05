@@ -44,7 +44,7 @@
 						<skipTests>false</skipTests>    
 					</configuration>
 					<parallel>methods</parallel>
-					<threadCount>2</threadCount>
+					<threadCount>1</threadCount>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
