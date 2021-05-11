@@ -1,2 +1,2 @@
 # Ci-course-project
-Test
+Test Project
